@@ -1,0 +1,56 @@
+.section-heading {
+  margin-bottom: 52px;
+  max-width: 600px;
+}
+
+.section-heading--centered {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-heading__eyebrow {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+}
+
+.section-heading--light .section-heading__eyebrow {
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.section-heading__title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-dark);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-heading--light .section-heading__title {
+  color: var(--color-white);
+}
+
+.section-heading__sub {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  max-width: 560px;
+}
+
+.section-heading--centered .section-heading__sub {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-heading--light .section-heading__sub {
+  color: rgba(255, 255, 255, 0.75);
+}

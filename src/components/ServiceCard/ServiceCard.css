@@ -1,0 +1,104 @@
+.service-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-card__icon-wrap {
+  width: 52px;
+  height: 52px;
+  background: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-bottom: 4px;
+  transition: var(--transition);
+}
+
+.service-card:hover .service-card__icon-wrap {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.service-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 0;
+}
+
+.service-card__desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.service-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.service-card__feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-sm);
+  color: var(--color-dark);
+}
+
+.service-card__feature-item svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.service-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: 8px;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.service-card__link:hover {
+  gap: 8px;
+}

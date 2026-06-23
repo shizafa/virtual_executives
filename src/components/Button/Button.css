@@ -1,0 +1,122 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  text-decoration: none;
+  border: 2px solid transparent;
+  line-height: 1;
+}
+
+/* Primary */
+.btn--primary {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-blue);
+  border-color: transparent;
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 122, 255, 0.35);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary */
+.btn--secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn--secondary:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-blue);
+}
+
+/* Ghost / outline dark */
+.btn--ghost {
+  background: transparent;
+  color: var(--color-dark);
+  border-color: var(--color-border);
+}
+
+.btn--ghost:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* White variant (on dark backgrounds) */
+.btn--white {
+  background: var(--color-white);
+  color: var(--color-primary);
+  border-color: transparent;
+  box-shadow: var(--shadow-md);
+}
+
+.btn--white:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Disabled */
+.btn--disabled,
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Loading */
+.btn--loading {
+  pointer-events: none;
+}
+
+.btn__spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.btn--secondary .btn__spinner {
+  border-color: rgba(0, 122, 255, 0.3);
+  border-top-color: var(--color-primary);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Sizes */
+.btn--sm {
+  padding: 9px 20px;
+  font-size: var(--font-size-xs);
+}
+
+.btn--lg {
+  padding: 16px 36px;
+  font-size: var(--font-size-base);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+  .btn__spinner { animation: none; }
+}

@@ -1,0 +1,72 @@
+/* Responsive Utilities */
+
+/* Large desktop: 1200px+ handled by default styles */
+
+/* Laptop / medium desktop */
+@media (max-width: 1200px) {
+  :root {
+    --max-width: 100%;
+    --container-padding: 32px;
+  }
+}
+
+/* Tablet landscape */
+@media (max-width: 992px) {
+  :root {
+    --section-padding: 72px;
+    --container-padding: 28px;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px;
+    --container-padding: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  :root {
+    --section-padding: 52px;
+    --container-padding: 16px;
+  }
+}
+
+/* Grid helpers */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 992px) {
+  .grid-3 { grid-template-columns: 1fr 1fr; }
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 576px) {
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 400px) {
+  .grid-4 { grid-template-columns: 1fr; }
+}
