@@ -4,9 +4,9 @@ import { contactInfo } from '../../data/contactInfo';
 import './Footer.css';
 
 const quickLinks = [
-  { href: "https://www.linkedin.com/", label: "LinkedIn" },
-  { href: "https://www.facebook.com/", label: "Facebook" },
-  { href: "https://www.instagram.com/", label: "Instagram" },
+  { href: "https://www.linkedin.com/company/vexecutives/", label: "LinkedIn" },
+  { href: "https://www.facebook.com/VExecutives", label: "Facebook" },
+  { href: "https://www.instagram.com/virtualexecutives/", label: "Instagram" },
 ];
 
 const serviceLinks = [
@@ -124,9 +124,9 @@ export default function Footer() {
             &copy; {currentYear} Virtual Executives. All rights reserved.
           </p>
           <div className="footer__legal">
-            <a href="#" className="footer__legal-link">Privacy Policy</a>
+            <a href="https://sites.google.com/view/vexecutive-privacy/home" target="_blank" className="footer__legal-link">Privacy Policy</a>
             <span aria-hidden="true">·</span>
-            <a href="#" className="footer__legal-link">Terms &amp; Conditions</a>
+            <a href="https://sites.google.com/view/vexxcutives-disclaimer/home" target="_blank" className="footer__legal-link">Terms &amp; Conditions</a>
           </div>
         </div>
       </div>

@@ -62,11 +62,11 @@ export default function AboutPage() {
                 />
                 <div className="story__img-accent" />
                 <div className="story__img-card story__img-card--1">
-                  <span className="story__img-stat">50+</span>
+                  <span className="story__img-stat">400+</span>
                   <span>Happy Clients</span>
                 </div>
                 <div className="story__img-card story__img-card--2">
-                  <span className="story__img-stat">100+</span>
+                  <span className="story__img-stat">500+</span>
                   <span>Projects Delivered</span>
                 </div>
               </div>
